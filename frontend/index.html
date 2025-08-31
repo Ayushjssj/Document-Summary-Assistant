@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document Summary Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main App Container -->
+    <div class="container">
+        <h1>Document Summary Assistant</h1>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" />
+            <select id="lengthSelect">
+        <option value="short">Short (~50 words)</option>
+        <option value="medium" selected>Medium (~150 words)</option>
+        <option value="long">Long (~300+ words)</option>
+      </select>
+            <button onclick="uploadFile()">Generate Summary</button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <div>
+                <h2>Extracted Text</h2>
+                <textarea id="extractedText" readonly></textarea>
+            </div>
+            <div>
+                <h2>AI Summary</h2>
+                <textarea id="summaryText" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="download-center">
+        <div class="download-buttons">
+            <button onclick="downloadTXT()">Download TXT</button>
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+
+</html>
