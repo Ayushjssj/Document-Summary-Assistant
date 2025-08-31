@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/process";
+const API_URL = "https://document-summary-assistant-a6xo.onrender.com/process";
 
 async function uploadFile() {
     const fileInput = document.getElementById("fileInput");
