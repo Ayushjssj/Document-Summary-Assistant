@@ -1,0 +1,185 @@
+/* General reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    height: 100%;
+    width: 92%;
+    max-width: 1300px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    background-color: #2196f3;
+    color: white;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.upload-section input,
+.upload-section select,
+.upload-section button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.upload-section button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-section button:hover {
+    background: #43a047;
+}
+
+.output-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.output-section div {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 12px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    background: #fff;
+}
+
+.output-section button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background: #2196f3;
+    color: white;
+    transition: background 0.3s;
+}
+
+.output-section button:hover {
+    background: #1976d2;
+}
+
+
+/* Full-page center for download buttons */
+
+.download-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1350px;
+    /* take full viewport height */
+    position: fixed;
+    /* always in middle of screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    /* let clicks pass through except buttons */
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    pointer-events: auto;
+    /* re-enable clicking on buttons */
+}
+
+.download-buttons button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #2196F3;
+    color: white;
+    transition: background 0.3s;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-buttons button:hover {
+    background: #1976d2;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .output-section {
+        grid-template-columns: 1fr;
+    }
+    textarea {
+        height: 200px;
+    }
+}
